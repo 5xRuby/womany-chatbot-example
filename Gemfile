@@ -57,6 +57,7 @@ gem 'facebook-messenger'
 gem 'activeadmin', '~> 1.0.0'
 gem 'devise'
 gem 'dotenv-rails'
+gem 'jieba_rb'
 group :development do
   gem 'pry-rails'
 end
