@@ -16,5 +16,6 @@ module WomanyChatbotExample
     # -- all .rb files in that directory are automatically loaded.
     config.paths.add File.join('app', 'bot'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'bot', '*')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'bot_response', '*')]
   end
 end
