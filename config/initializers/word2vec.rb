@@ -19,6 +19,9 @@ class Word2Vec
   end
 
   def similar(word)
-    @distance.caliculate(word).force_encoding('UTF-8').split
+    @distance.caliculate(word).force_encoding('UTF-8')&.split || []
   end
 end
+
+# Preload Word2Vec data
+Word2Vec.distance

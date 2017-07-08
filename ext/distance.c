@@ -7,7 +7,7 @@
 
 const long long max_size = 1000;
 const long long N = 10;
-const long long max_w = 10;
+const long long max_w = 50;
 
 FILE *f;
 char st1[max_size];
