@@ -9,7 +9,7 @@ Bot.on :message do |message|
     if suggest
       message.reply(
         text: '你想說的是？',
-        quick_replies: QuickReply.new(suggest.options.split(','))
+        quick_replies: QuickReply.new(suggest.options)
       )
     else
       message.reply(text: 'What?')
