@@ -5,7 +5,8 @@ Bot.on :message do |message|
   if text.end_with?('？')
     reply = SuggestBotResponse.new(message).reply
   else
-    reply = KeywordBotResponse.new(message).reply
+    client = Client.find_or_create_by(uid: message.sender['id'])
+    reply = KeywordBotResponse.new(message, client).reply
   end
   message.reply(reply)
 end
